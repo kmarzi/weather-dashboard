@@ -1,98 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./assets/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/4439e3b362.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- As a link -->
-    <nav class="navbar navbar-light bg-dark">
-        <a class="navbar-brand mb-0 h1 w-100 text-center text-white" href="#">Weather Dashboard</a>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-4 bg-light">
-                <p class="search-header my-1">Search for a city</p>
-                <div class="input-group mb-3">
-                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name"
-                        aria-label="Enter city name">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="search-button">
-                            <i class="fas fa-search-location"></i>
-                        </button>
-                    </div>
-                </div>
-                <button class="btn btn-primary mb-3" type="button" id="clear-history"> <i class="fas fa-trash-alt"></i> Clear history</button>
-                <form id="history"></form>
+    <header id="page_header" class="container-fluid  pt-3 pb-3 text-center">
+        <h1 class="text-white">Kim's Weather Dashboard</h1>
+    </header>
+
+    <div class="container-fluid row">
+        <div class="col-3 left_div justify-content-center pt-3">
+            <div class="search_div mb-4">
+                <h5 class="justify-content-center pt-2 pl-3">Search by city: </h5>
+                <form class="form-inline my-2 my-lg-0 mt-3 ml-3">
+                    <input class="form-control mr-sm-2 float-left" type="search" placeholder="Search" id="search_bar"
+                        aria-label="Search">
+                    <button id="searchbtn" class="btn btn-outline-light my-2 my-sm-0" type="submit"><i
+                            class="fas fa-search"></i></button>
+                </form>
             </div>
-            <div class="col-8">
-                <div class="row mr-0">
-                    <div class="col-12 border border-dark m-3 rounded">
-                        <div class="row">
-                            <div class="col-12">
-                                <span id="city-name" class="city-name align-middle"></span>
-                                <img id="current-pic" src="placeholder" alt="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="temperature"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="humidity"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="wind-speed"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 d-flex">
-                                <p id="UV-index"></p>
-                            </div>
-                        </div>
+            <h5 class="justify-content-center pt-2 pl-3">Your previously searched cities: </h5>
+            <div class="container my-3 col-12" id="searched_cities_container">
+
+            </div>
+        </div>
+
+        <div class="today_weather col-9 pt-3">
+            <div class="bg-light p-3">
+                <h2 class="justify-content-center text-dark" id="name_of_city"></h2>
+                <div class="row">
+                    <div class="col-6">
+                        <p id="today_temp"></p>
+                        <p id="today_humidity"></p>
+                        <p id="today_wind_speed"></p>
+                        <img id="today_icon_div" src="">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h3>5-Day Forecast</h3>
-                    </div>
+            </div>
+
+            <div class="five-day-div bg-light p-3 m-3 w-100">
+                <div class="bg-light">
+                    <h5 class="text-dark">Five Day Weather Forecast</h5>
                 </div>
-                <div class="row">
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div class="row justify-content-center">
+                    <div id="day0" class="card-body mx-2 my-2">
+                        <h5 id="0date"></h5>
+                        <p id="0five_day_temp"></p>
+                        <p id="0five_day_humidity"></p>
+                        <img id="0five_day_icon" src="">
+                    </div>
+                    <div id="day1" class="card-body mx-2 my-2">
+                        <h5 id="1date"></h5>
+                        <p id="1five_day_temp"></p>
+                        <p id="1five_day_humidity"></p>
+                        <img id="1five_day_icon" src="">
+                    </div>
+                    <div id="day2" class="card-body mx-2 my-2">
+                        <h5 id="2date"></h5>
+                        <p id="2five_day_temp"></p>
+                        <p id="2five_day_humidity"></p>
+                        <img id="2five_day_icon" src="">
+                    </div>
+                    <div id="day3" class="card-body mx-2 my-2">
+                        <h5 id="3date"></h5>
+                        <p id="3five_day_temp"></p>
+                        <p id="3five_day_humidity"></p>
+                        <img id="3five_day_icon" src="">
+                    </div>
+                    <div id="day4" class="card-body mx-2 my-2">
+                        <h5 id="4date"></h5>
+                        <p id="4five_day_temp"></p>
+                        <p id="4five_day_humidity"></p>
+                        <img id="4five_day_icon" src="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 
