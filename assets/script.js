@@ -45,3 +45,13 @@ function renderButtons(){
         listClicker();
       }
     }
+       
+    function listClicker(){
+    $(".listbtn").on("click", function(event){
+        console.log("anybody home?")
+        event.preventDefault();
+        console.log("hello?");
+        city = $(this).text().trim();
+        APIcalls(); 
+    })
+    }
