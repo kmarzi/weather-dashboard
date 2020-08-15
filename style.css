@@ -30,6 +30,7 @@
 .card-body{
     background-color: darkslateblue;
     color: white;
+    border-color: black;
 }
 
 #searchbtn{
