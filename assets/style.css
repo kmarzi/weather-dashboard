@@ -1,18 +1,18 @@
 #page_header{
     text-align: center;
-    background-color: maroon;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: darkslateblue;
+    font-family: cursive;
+    font-weight: bold;
     color: white
-    
     
 
 }
 
 
 .listbtn{
-    background-color: maroon;
+    background-color: darkslateblue;
     color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 2px; 
     margin-left: 20%;
     margin-right: 20%;
@@ -24,19 +24,18 @@
 
 
 .left_div{
-    /* background-color: #e2d9be;  */
     height: 100%; 
 }
 
 .card-body{
-    background-color: maroon;
+    background-color: darkslateblue;
     color: white;
 }
 
 #searchbtn{
-    background-color: maroon;
+    background-color: darkslateblue;
     color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 2px; 
     
 
