@@ -22,8 +22,8 @@
         <div class="col-3 left_div justify-content-center pt-3">
             <div class="search_div mb-4">
                 <h5 class="justify-content-center pt-2 pl-3">Search by city: </h5>
-                <form class="form-inline my-2 my-lg-0 mt-3 ml-3">
-                    <input class="form-control mr-sm-2 float-left" type="search" placeholder="Search" id="search_bar"
+                <form id="cityForm" class="form-inline my-2 my-lg-0 mt-3 ml-3">
+                    <input class="form-control mr-sm-2 float-left" type="search" placeholder="Search" id="searchBar"
                         aria-label="Search">
                     <button id="searchbtn" class="btn btn-outline-light my-2 my-sm-0" type="submit"><i
                             class="fas fa-search-location"></i></button>
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="current_weather col-9 pt-3">
+        <div class="currentWeather col-9 pt-3">
             <div class="bg-light p-3">
                 <h2 class="justify-content-center text-dark" id="city-name"></h2>
                 <div class="row">
@@ -47,40 +47,30 @@
                     </div>
                 </div>
             </div>
-            <div class="five-day-div bg-light p-3 m-3 w-100">
+            <div class="fiveDay-div bg-light p-3 m-3 w-100">
                 <div class="bg-light">
-                    <h5 class="text-dark">Five Day Weather Forecast</h5>
+                    <h5 class="text-dark">Weekly Weather Forecast</h5>
                 </div>
             <div class="row justify-content-center">
-                <div id="day0" class="card-body mx-2 my-2">
-                    <h5 id="0date"></h5>
-                    <p id="0five_day_temp"></p>
-                    <p id="0five_day_humidity"></p>
-                    <img id="0five_day_icon" src="">
-                </div>
                 <div id="day1" class="card-body mx-2 my-2">
-                        <h5 id="1date"></h5>
-                        <p id="1five_day_temp"></p>
-                        <p id="1five_day_humidity"></p>
-                        <img id="1five_day_icon" src="">
+                 <p id="day1-temp"></p>
+                 <p id="day1-humidity"></p>
                 </div>
-                <div id="day2" class="card-body mx-2 my-2"> 
-                        <h5 id="2date"></h5>
-                        <p id="2five_day_temp"></p>
-                        <p id="2five_day_humidity"></p>
-                        <img id="2five_day_icon" src="">
+                <div id="day2" class="card-body mx-2 my-2">
+                    <p id="day2-temp"></p>
+                    <p id="day2-humidity"></p>
                 </div>
-                <div id="day3" class="card-body mx-2 my-2">
-                        <h5 id="3date"></h5>
-                        <p id="3five_day_temp"></p>
-                        <p id="3five_day_humidity"></p>
-                        <img id="3five_day_icon" src="">
+                <div id="day3" class="card-body mx-2 my-2"> 
+                    <p id="day3-temp"></p>
+                    <p id="day3-humidity"></p>
                 </div>
                 <div id="day4" class="card-body mx-2 my-2">
-                        <h5 id="4date"></h5>
-                        <p id="4five_day_temp"></p>
-                        <p id="4five_day_humidity"></p>
-                        <img id="4five_day_icon" src="">
+                    <p id="day4-temp"></p>
+                    <p id="day4-humidity"></p>
+                </div>
+                <div id="day5" class="card-body mx-2 my-2">
+                    <p id="day5-temp"></p>
+                    <p id="day5-humidity"></p>
                     </div>
                 </div>
             </div>

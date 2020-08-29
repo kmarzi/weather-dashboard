@@ -4,10 +4,7 @@
     font-family: cursive;
     font-weight: bold;
     color: white
-    
-
 }
-
 
 .listbtn{
     background-color: darkslateblue;
@@ -19,9 +16,7 @@
     width: 60%;
     margin-top: 2px;
     margin-bottom: 2px;
-
 }
-
 
 .left_div{
     height: 100%; 
@@ -38,6 +33,4 @@
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 2px; 
-    
-
 }
