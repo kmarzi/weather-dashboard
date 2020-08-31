@@ -39,11 +39,12 @@
             <div class="bg-light p-3">
                 <h2 class="justify-content-center text-dark" id="city-name"></h2>
                 <div class="row">
-                    <div class="col-6">
-                        <p id="current-temp"></p>
-                        <p id="current-humidty"></p>
-                        <p id="current-wind-speed"></p>
-                        <img id="current-icon" src="">
+                    <div class="col-8">
+                        <h3 id="current-date"></h3>
+                        <p id="current-temp">Current Temperature is: </p>
+                        <p id="current-humidity">Current Humidity is: </p>
+                        <p id="current-wind-speed">Current Wind Speed is: </p>
+                        <p id="current-icon"></p>
                     </div>
                 </div>
             </div>
@@ -55,22 +56,27 @@
                 <div id="day1" class="card-body mx-2 my-2">
                  <p id="day1-temp"></p>
                  <p id="day1-humidity"></p>
+                 <p id="day1-windspeed"></p>
                 </div>
                 <div id="day2" class="card-body mx-2 my-2">
                     <p id="day2-temp"></p>
                     <p id="day2-humidity"></p>
+                    <p id="day2-windspeed"></p>
                 </div>
                 <div id="day3" class="card-body mx-2 my-2"> 
                     <p id="day3-temp"></p>
                     <p id="day3-humidity"></p>
+                    <p id="day3-windspeed"></p>
                 </div>
                 <div id="day4" class="card-body mx-2 my-2">
                     <p id="day4-temp"></p>
                     <p id="day4-humidity"></p>
+                    <p id="day4-windspeed"></p>
                 </div>
                 <div id="day5" class="card-body mx-2 my-2">
                     <p id="day5-temp"></p>
                     <p id="day5-humidity"></p>
+                    <p id="day5-windspeed"></p>
                     </div>
                 </div>
             </div>
@@ -81,6 +87,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
 </body>
 

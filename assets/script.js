@@ -7,21 +7,20 @@
  var windSpeed
  var uvi
 
-
+  // grab form element 
+ // add an eventlistener on submit for the form
+ // pass the getWeather function into the event listener
 var cityForm = document.getElementById("cityForm");
 cityForm.addEventListener("submit", function(event){
     event.preventDefault();
     getWeather();
 })
 
-//grab form element 
-//add an eventlistener on submit for the form
-//pass the getWeather function into the event listener
 
-//function for CURRENT weather
-//grab elements that we want to add text
-//setting context = correct weather value
-
+// function for CURRENT weather
+// grab elements that we want to add text
+// setting context = correct weather value
+// tutor help
 function getWeather() {
     var cityName = document.getElementById("searchBar").value;
     console.log(cityName)
@@ -37,17 +36,38 @@ function getWeather() {
      var tempP = document.getElementById("current-temp")
      tempP.textContent ="Current Temperature is: " + (result.main.temp)
 
-     var humidtyP = document.getElementById("current-humidity")
-     humidtyP.textContent ="Current Humidity is: " + (result.main.humidity)
+     var humidityP = document.getElementById("current-humidity")
+     humidityP.textContent ="Current Humidity is: " + (result.main.humidity)
 
      var windSpeedP = document.getElementById("current-wind-speed")
      windSpeedP.textContent ="Current Windspeed is: " + (result.wind.speed)
 
-     var currentIconP = document.getElementById ("current-icon")
-     currentIconP
+    var iconcode = result.weather[0].icon
+    displayCurrentIcon(iconcode);
+
  }})
 }
-result();
+
+//current date
+function displayCurrentDate() {
+    var currentDate = moment().format('MMMM Do YYYY')
+    var displayDate = document.getElementById("current-date")
+    displayDate.textContent = "Todays Date is: " + (currentDate)
+}
+displayCurrentDate();
+
+//curent icon
+function displayCurrentIcon (iconcode) {
+    var currentIconP = document.getElementById ("current-icon")
+    currentIconP.innerHTML = ""
+    var currentImg = document.createElement("img")
+    var iconUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    currentImg.setAttribute("src" , iconUrl)
+    currentIconP.appendChild(currentImg)
+}
+
+
+
 
 //attempting local storage
 // function init() {
@@ -59,6 +79,21 @@ result();
 //     }
 // }
 
-//5 day forecast
+// ---used code from coding quiz---
+//function save(){
+//     event.preventDefault()
+//     console.log("save")
+//     var localStorageArr = JSON.parse(localStorage.getItem("cityName"))||[]
+//     var newEntry = {
+//     
+//     }
+//     localStorageArr.push(newEntry)
+//     localStorage.setItem("cityName", JSON.stringify(localStorageArr))
+//     location.href="highscores.html"
+// }
+// submitButton.addEventListener("click", save)
 
 
+
+
+//5 day forcast
