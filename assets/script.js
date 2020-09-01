@@ -24,7 +24,7 @@ cityForm.addEventListener("submit", function(event){
 function getWeather() {
     var cityName = document.getElementById("searchBar").value;
     console.log(cityName)
-    var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=f22c7df987b77fbf3f4c8bf5eb71a13f&units=imperial";
+    var queryUrl = "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=f22c7df987b77fbf3f4c8bf5eb71a13f&units=imperial";
  $.ajax({
      url: queryUrl, success: function(result){
      console.log(result)
@@ -61,7 +61,7 @@ function displayCurrentIcon (iconcode) {
     var currentIconP = document.getElementById ("current-icon")
     currentIconP.innerHTML = ""
     var currentImg = document.createElement("img")
-    var iconUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    var iconUrl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     currentImg.setAttribute("src" , iconUrl)
     currentIconP.appendChild(currentImg)
 }
